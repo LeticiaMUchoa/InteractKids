@@ -1,0 +1,130 @@
+import { StyleSheet } from 'react-native';
+
+const estilos = StyleSheet.create({
+  fundo: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
+  container: {
+    flex: 1,
+    padding: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    padding: 16,
+  },
+  logo: {
+    width: 100,
+    height: 100,
+  },
+  rankingContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#004051',
+  },
+  titulo: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 2,
+    color: '#e8f578',
+    textShadowColor: 'black',
+    textShadowOffset: { width: -5, height: 5 },
+    textShadowRadius: 10,
+    textAlign: 'center',
+  },
+  item: {
+    backgroundColor: '#e8f578',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 10,
+    alignItems: 'center', 
+  },
+  rankingInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center', 
+    marginBottom: 5, 
+  },
+  posicao: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#004051',
+  },
+  apelido: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#004051',
+  },
+  tempo: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#004051',
+  },
+  texto: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#004051',
+  },
+  botaovoltarranking: {
+    backgroundColor: '#e8f578', 
+    padding: 10, 
+    alignItems: 'center', 
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: 'black',
+    fontWeight: 'bold',
+  },
+  jogosContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
+  jogoCard: {
+    width: '80%',
+    padding: 8,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  jogoNome: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#e8f578',
+    marginBottom: 10,
+    textShadowColor: 'black',
+    textShadowOffset: { width: -5, height: 5 },
+    textShadowRadius: 10,
+    textAlign: 'center',
+  },
+  imagemJogo: {
+    width: 300,
+    height: 100,
+    marginBottom: 10,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: 'black',
+  },
+  botaoJogar: {
+    backgroundColor: '#e8f578', 
+    padding: 10, 
+    alignItems: 'center', 
+    marginTop: 10, 
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: 'black',
+  },
+  textoBotaoJogar: {
+    color: '#004051',
+    fontWeight: 'bold',
+  },
+});
+
+export default estilos;
