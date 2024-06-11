@@ -51,6 +51,13 @@ const Game = ({ navigation, route }) => {
         }
     }, [gameStarted]);
 
+    useEffect(() => {
+        if (gameOver) {
+            console.log('Fim do jogo, salvando ranking:', { apelido, totalTime, score });
+            saveRankingEmoji(apelido, totalTime, score);
+        }
+    }, [gameOver, totalTime, score]); // Adiciona dependências para garantir que os valores finais sejam usados
+
     const generateNewQuestion = () => {
         const correctAnimalPair = getRandomAnimalPair();
         let wrongAnimals = [];
@@ -65,6 +72,7 @@ const Game = ({ navigation, route }) => {
         setOptions(shuffledOptions);
         setTimeLeft(10);
         setSelectedOptions([]);
+        console.log('Nova questão gerada:', correctAnimalPair, shuffledOptions);
     };
 
     const handleOptionPress = useCallback((option) => {
@@ -74,11 +82,21 @@ const Game = ({ navigation, route }) => {
 
         if (newSelectedOptions.length === 2 || option === '') {
             const isCorrect = newSelectedOptions.every((selectedOption) => currentAnimalPair.includes(selectedOption));
-            setTotalTime((prevTime) => prevTime + (10 - timeLeft));
+            const timeSpent = 10 - timeLeft;
+
+            setTotalTime((prevTime) => {
+                const newTotalTime = prevTime + timeSpent;
+                console.log('Total Time Updated:', newTotalTime);
+                return newTotalTime;
+            });
 
             if (isCorrect) {
                 const pointsToAdd = 10;
-                setScore((prevScore) => prevScore + pointsToAdd);
+                setScore((prevScore) => {
+                    const newScore = prevScore + pointsToAdd;
+                    console.log('Score Updated:', newScore);
+                    return newScore;
+                });
                 setConsecutiveCorrect((prevConsecutiveCorrect) => prevConsecutiveCorrect + 1);
             } else {
                 setConsecutiveCorrect(0);
@@ -89,7 +107,6 @@ const Game = ({ navigation, route }) => {
                 generateNewQuestion();
             } else {
                 setGameOver(true);
-                saveRankingEmoji(apelido, totalTime, score);
             }
         } else {
             setOptions((prevOptions) => prevOptions.filter((opt) => opt !== option));
@@ -110,7 +127,7 @@ const Game = ({ navigation, route }) => {
     };
 
     const handleGoBack = () => {
-        navigation.goBack(); // Volta para a tela anterior
+        navigation.goBack();
     };
 
     return (
