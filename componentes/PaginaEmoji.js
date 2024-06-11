@@ -95,7 +95,7 @@ const Game = ({ navigation, route }) => {
           generateNewQuestion();
         } else {
           setGameOver(true);
-          saveRankingEmoji(apelido, totalTime, score); // Salva o ranking ao finalizar o jogo
+          saveRankingEmoji(apelido, totalTime, score); 
         }
       } else {
         setSelectedOptions(newSelectedOptions);
@@ -154,9 +154,8 @@ const Game = ({ navigation, route }) => {
           </>
         ) : (
           <>
-            <Text style={estilos.questionCounter}>
-              Acerte os Emojis: Fase {questionIndex} Acerte os Emojis: Fase {questionIndex + 1} ⏱️
-            </Text>
+            <Text style={estilos.questionCounter}> 
+            Acerte os Emojis: Fase {questionIndex + 1} ⏱️ </Text>
             <Text style={estilos.animalText}>
               {currentAnimalPair.join(' ')}
             </Text>
