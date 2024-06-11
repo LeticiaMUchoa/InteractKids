@@ -9,16 +9,6 @@ const TelaRankings = ({ route }) => {
   const { apelido } = route.params;
   const [rankings, setRankings] = useState({});
 
-  useEffect(() => {
-    const fetchRankings = async () => {
-      const labirintoRanking = await getRankingLabirinto();
-      const memoriaRanking = await getRankingMemoria();
-      const emojiRanking = await getRankingEmoji();
-      setRankings({ labirinto: labirintoRanking, memoria: memoriaRanking, emoji: emojiRanking });
-    };
-    fetchRankings();
-  }, []);
-
   const jogos = [
     { nome: 'Labirinto', imagem: require('../assets/imagem1.png'), rota: 'PaginaLabirintoRanking' },
     { nome: 'Jogo da Memória', imagem: require('../assets/imagem2.png'), rota: 'PaginaJogoMemoriaRanking' },
