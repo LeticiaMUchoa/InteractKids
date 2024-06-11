@@ -66,6 +66,7 @@ const getRankingMemoria = async () => {
 
 const saveRankingEmoji = async (apelido, time, score) => {
   try {
+    console.log('Salvando:', { apelido, time, score });
     await addDoc(collection(db, 'rankingemoji'), {
       apelido,
       time,
@@ -83,6 +84,7 @@ const getRankingEmoji = async () => {
     const q = query(collection(db, 'rankingemoji'), orderBy('score', 'desc'), limit(5));
     const querySnapshot = await getDocs(q);
     const rankings = querySnapshot.docs.map(doc => doc.data());
+    console.log('Rankings recuperados:', rankings);
     return rankings;
   } catch (error) {
     console.error('Erro ao recuperar rankings: ', error);
