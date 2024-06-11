@@ -56,8 +56,7 @@ const Game = ({ navigation, route }) => {
             console.log('Fim do jogo, salvando ranking:', { apelido, totalTime, score });
             saveRankingEmoji(apelido, totalTime, score);
         }
-    }, [gameOver, totalTime, score]); // Adiciona dependências para garantir que os valores finais sejam usados
-
+    }, [gameOver, totalTime, score]); 
     const generateNewQuestion = () => {
         const correctAnimalPair = getRandomAnimalPair();
         let wrongAnimals = [];
