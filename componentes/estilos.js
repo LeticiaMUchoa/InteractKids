@@ -48,23 +48,23 @@ const estilos = StyleSheet.create({
     color: '#FFF',
   },
   goal: {
-    backgroundColor: '#FF0000', // Vermelho
+    backgroundColor: '#FF0000', 
   },
   labirintoContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#004051', // Nova cor de fundo
+    backgroundColor: '#004051', 
   },
   infoContainer: {
-    padding: 20, // Adicionando padding para distanciar as palavras do resto do código
+    padding: 20, 
     alignItems: 'center',
   },
   infoText: {
     fontWeight: 'bold', 
     color: '#e8f578', 
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
   },
 
@@ -76,7 +76,7 @@ const estilos = StyleSheet.create({
   maze: {
     flexDirection: 'column',
     borderWidth: 1,
-    backgroundColor: '#004051', // Nova cor de fundo
+    backgroundColor: '#004051', 
   },
   row: {
     flexDirection: 'row',
@@ -173,8 +173,8 @@ const estilos = StyleSheet.create({
     marginBottom: 20,
     color: '#e8f578', 
     fontWeight: 'bold',
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black',
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
   },
 
@@ -208,8 +208,8 @@ const estilos = StyleSheet.create({
     marginTop: 20,
     color: '#e8f578', 
     fontWeight: 'bold',
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
 
   },
@@ -217,8 +217,8 @@ const estilos = StyleSheet.create({
     fontSize: 20,
     marginTop: 10,
     color: '#e8f578',
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
     fontWeight: 'bold',
   },
@@ -227,8 +227,8 @@ const estilos = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     color: '#e8f578', 
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
   },
   button: {
@@ -277,8 +277,8 @@ const estilos = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     color: '#e8f578', 
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
   },
   stats: {
@@ -286,8 +286,8 @@ const estilos = StyleSheet.create({
     marginBottom: 18,
     color: '#e8f578', 
     fontWeight: 'bold',
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 },
     textShadowRadius: 10,
   },
   board2: {
