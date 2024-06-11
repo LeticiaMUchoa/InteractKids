@@ -25,8 +25,8 @@ const estilos = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#FFF',
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
   },
   jogosContainer: {
@@ -48,8 +48,8 @@ const estilos = StyleSheet.create({
     fontWeight: 'bold',
     color: '#e8f578',
     marginBottom: 10,
-    textShadowColor: 'black', // Define a cor da borda
-    textShadowOffset: { width: -5, height: 5 }, // Ajusta o deslocamento da sombra para simular a borda
+    textShadowColor: 'black', 
+    textShadowOffset: { width: -5, height: 5 }, 
     textShadowRadius: 10,
   },
   imagemJogo: {
